@@ -23,14 +23,14 @@ public class AgentMovement : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-            Debug.Log("1");
+           
             _targetPositions = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
     }
 
     private void SetAgentPosition()
     {
-        Debug.Log("2");
+       
         _agent.SetDestination(new Vector3(_targetPositions.x, _targetPositions.y, transform.position.z));
     }
 }
